@@ -1,0 +1,31 @@
+
+<div class="col-lg-12">
+  <h2>product</h2>
+  <a style="margin-left: 1000px;padding: 5px;"routerLink="/product">Add Product</a>
+  <br><br>
+
+  <table class="table table-bordered">
+    <tr>
+      <!-- <th>Actions</th> -->
+      <th>No</th>
+      <th>Name</th>
+      <th>MRP</th>
+       <th>price</th>
+       <th>image</th>
+       <th>Decription</th>
+    </tr>
+    <tr *ngFor="let user of abs;let i = index">
+      <!-- <td>
+        <button class="btn btn-outline-primary"routerLink="/product/{{ user.id }}">Edit</button>
+        <button class="btn btn-outline-danger" (click)="delete(user.id)">Delete</button> -->
+      <!-- </td> -->
+      <td>{{i+1}}</td>
+      <!-- <td>{{user.id}}</td> -->
+      <td>{{user.name}}</td>
+      <td>{{user.MRP}}</td>
+      <td>{{user.price}}</td>
+      <td>{{user.Image}}</td>
+      <td>{{user.Description}}</td> 
+
+    </tr>
+<br><br><br>

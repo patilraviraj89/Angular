@@ -1,0 +1,51 @@
+<div class="colorlib-product">
+			<div class="container" *ngIf="product">
+				<div class="row row-pb-lg product-detail-wrap">
+					<div class="col-sm-8">
+						<div>
+							<div class="item">
+								<div class="product-entry border">
+									<a routerLink="/product" class="prod-img">
+										<img src="{{product.avatar}}" class="img-fluid" alt="Free html5 bootstrap 4 template">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="product-desc">
+							<h3>{{ product.name }}</h3>
+
+							<p class="price">
+								<span>{{ product.price | currency:"INR" }}</span>
+                <p>{{product.description}}</p>
+
+
+                    <div class="input-group mb-4">
+
+                      <span class="input-group-btn">
+                          <button type="button" class="quantity-left-minus btn"  data-type="minus" data-field="" (click)="decrement()">
+                            <i class="fa-solid fa-minus"></i>
+                          </button>
+                        </span>
+
+                        <input type="number" id="quantity" name="quantity" [(ngModel)]="quantity" class="form-control input-number" readonly value="1" min="1" max="100">
+
+                       <span class="input-group-btn ml-1">
+                          <button type="button" class="quantity-right-plus btn" data-type="plus" data-field="" (click)="increment()">
+                            <i class="fa-sharp fa-solid fa-plus"></i>
+                         </button>
+                       </span>
+                      </div>
+                    <div class="row">
+                      <div class="col-sm-12 text-center" >
+                  <p class="addtocart"><a  class="btn btn-secondary"(click)="addtocart()"><i class="icon-shopping-cart"></i> Add to Cart</a></p>
+                </div>
+              </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+

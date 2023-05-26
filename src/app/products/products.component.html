@@ -1,0 +1,21 @@
+
+<div class="colorlib-product">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2 text-center colorlib-heading colorlib-heading-sm">
+        <h3 style="color:lightskyblue;">View All Products</h3>
+      </div>
+    </div>
+    <div class="row row-pb-md-2">
+      <div class="col-md-3 col-lg-3 mb-4 text-center"*ngFor="let data of result ">
+        <div class="product-entry border">
+          <a href="/productsdetails/{{data.id}}" class="prod-img">
+            <img style="height:200px;width:200px;" src="{{data.avatar}}" alt="">
+            <!-- <img src="images/item-1.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template"> -->
+          </a>
+          <div class="desc">
+            <h2><a href="#">{{data.name}}</a></h2>
+            <span class="price">Price {{data.price }}</span>
+          </div>
+        </div>
+      </div>
